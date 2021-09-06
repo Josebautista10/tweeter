@@ -1,0 +1,37 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+  margin: 0 1.5em;
+  justify-content:center;
+  display: flex;
+  align-items: center;
+}
+
+nav div {
+  margin: 0 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav div p {
+  display: flex;
+  align-items: center;
+  margin: 0
+}
+
+nav div i {
+  color: red;
+  display: flex;
+  align-items: center;
+}
