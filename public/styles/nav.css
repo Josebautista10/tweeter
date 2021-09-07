@@ -1,11 +1,11 @@
-nav {
+.navbar {
   height: 120px;
   width: 100vw;
   background-color: #4056a1;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  position:relative;
+  position:relative
 }
 
 nav span {
@@ -35,3 +35,4 @@ nav div i {
   display: flex;
   align-items: center;
 }
+
