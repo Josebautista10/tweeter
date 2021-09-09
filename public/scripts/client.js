@@ -95,7 +95,7 @@ const validate = (str) => {
     return false;
   }
 
-  if (str.length === 0) {
+  if (!str.length) {
     $('#error-container')
       .text(
         ' ⚠  Come on, I know you have more to say. Please input some text.  ⚠'

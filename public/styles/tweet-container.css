@@ -7,9 +7,19 @@
   position: relative;
   transition-duration: 0.4s;
   box-shadow: 0 4px 15px 0 rgba(255,255,255, 0.9);
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 .tweet-container:hover {
   box-shadow: 5px 8px 15px 5px rgba(126, 52, 161, 0.75);
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
 }
 
 .tweet-header {
