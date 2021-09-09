@@ -27,31 +27,31 @@ $(document).ready(() => {
     }
   });
 
-  //Get the button
-  const scrollBtn = document.getElementById('scrollButton');
-
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = () => {
     scrollFunction();
+
     if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.body.scrollTop > 70 ||
+      document.documentElement.scrollTop > 70
     ) {
-      $('#scrollingNav').removeClass('navbar').addClass('nav-up');
+      $('#scrollingNav').slideUp('slow');
     } else {
-      $('#scrollingNav').removeClass('nav-up').addClass('navbar');
+      $('#scrollingNav').slideDown('slow');
     }
   };
+
  
 
   const scrollFunction = () => {
+    
     if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.body.scrollTop > 70 ||
+      document.documentElement.scrollTop > 70
     ) {
-      scrollBtn.style.display = 'block';
+      $('#scrollButton').slideDown('slow');
     } else {
-      scrollBtn.style.display = 'none';
+      $('#scrollButton').slideUp('slow');
     }
   };
 

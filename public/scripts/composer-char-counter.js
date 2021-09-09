@@ -15,8 +15,8 @@ const charCounter = function () {
   }
   if (outputLength > 0) {
     // If output is less than 0 the counter and the words will turn black again.
-    $('#chars').css({ color: 'black' });
-    $('#tweet-text').css({ color: 'black' });
+    $('#chars').css({ color: 'white' });
+    $('#tweet-text').css({ color: 'white' });
   }
 
 };

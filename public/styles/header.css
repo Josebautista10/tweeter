@@ -1,15 +1,47 @@
 .profile-header {
-  height: 400px;
-  width: 100%;
-  background-color: #f6e05e;
-  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  width: 90%;
   padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
 }
 
-.profile-header-items {
+.profile-header-items{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6e05e;
-  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  flex-direction: column;
+  margin: 0;
+  color:black;
+  background: linear-gradient(105deg, #d422b1, #ffce00, #ff2323, #3af8f8);
+  background-size: 800% 800%;
+  animation: GradientBackground 15s ease infinite;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px 0 rgba(255,255,255, 0.9);
+  margin-top: 30px;
+
+}
+
+.profile-header-items h2{
+  margin: 0;
+  color:black;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

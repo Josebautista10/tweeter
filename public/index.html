@@ -3,7 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -18,7 +21,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <link rel="stylesheet" href="/styles/scroll-button.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/user-icon.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -56,8 +59,10 @@
     <nav class="navbar" id="scrollingNav">
       <span>tweeter</span>
       <div class="nav-div">
-        <button id="flip"><strong>Write&nbsp;</strong> a new tweet</button>
-        <i class="fas fa-angle-double-down"></i>
+        <button class="button button--calypso" id="flip">
+          <span>Write a tweet</span>
+        </button>
+        <i class="fas fa-angle-double-down bounce"></i>
       </div>
     </nav>
 
@@ -65,17 +70,18 @@
 
     <header class="profile-header">
       <div class="profile-header-items">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div class="profile-header-items">
-        <h2>Your Name</h2>
+        <img
+          class="crossRotate"
+          src="https://static.thenounproject.com/png/363633-200.png"
+          alt="Cross Menu button"
+        />
+        <h2>Jose</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        
         <div id="disappear">
           <h2 class="form-heading">Compose Tweet</h2>
           <form id="submit-form">
@@ -87,7 +93,7 @@
               id="tweet-text"
             ></textarea>
             <div class="button-counter">
-              <button class="tweet-button" type="submit">Tweet</button>
+              <button class="btn-hover color-7" type="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text" id="chars"
                 >140</output
               >
