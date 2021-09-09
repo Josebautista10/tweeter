@@ -1,4 +1,4 @@
-nav {
+.navbar {
   height: 120px;
   width: 100%;
   top: 0;
@@ -43,4 +43,8 @@ nav button {
   margin: 0;
   background-color: #4056a1;
   color: #ffffff;
+}
+
+.nav-up {
+  display: hidden;
 }

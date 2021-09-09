@@ -33,11 +33,22 @@ $(document).ready(() => {
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = () => {
     scrollFunction();
-    console.log('wibdow on scorll');
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      $('#scrollingNav').removeClass('navbar').addClass('nav-up');
+    } else {
+      $('#scrollingNav').removeClass('nav-up').addClass('navbar');
+    }
   };
+ 
 
   const scrollFunction = () => {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
       scrollBtn.style.display = 'block';
     } else {
       scrollBtn.style.display = 'none';
@@ -52,6 +63,7 @@ $(document).ready(() => {
   // calls the function when button is clicked
   $('#scrollButton').click(() => {
     topFunction();
+    $('#disappear').slideDown('slow');
   });
 
   //makes the user tweet section scroll up when button is clicked
