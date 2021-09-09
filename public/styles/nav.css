@@ -17,6 +17,20 @@ nav span {
   align-items: center;
 }
 
+.logo {
+  font-family: 'Bungee', sans-serif;
+  margin: 0 1.5em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  -webkit-animation:spin 0.5s linear ;
+  -moz-animation:spin 0.5s linear ;
+  animation:spin 0.5s linear ;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 nav div {
   margin: 0 1.5em;
   display: flex;
