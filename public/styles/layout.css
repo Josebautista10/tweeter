@@ -3,10 +3,13 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- html {
+html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -14,7 +17,7 @@
  * Global layout stuff
  */
 
- body {
+body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,11 +26,12 @@
   flex-direction: column;
   position: absolute;
   align-items: center;
+  width: 100%;
 }
 
 .container {
   width: 90%;
-  /* padding-top: 120px; */
+  padding-top: 120px;
 }
 
 /*

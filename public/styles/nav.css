@@ -1,11 +1,12 @@
-.navbar {
+nav {
   height: 120px;
-  width: 100vw;
+  width: 100%;
+  top: 0;
   background-color: #4056a1;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  position:relative
+  position:fixed;
 }
 
 nav span {
@@ -36,3 +37,10 @@ nav div i {
   align-items: center;
 }
 
+nav button {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: #4056a1;
+  color: #ffffff;
+}

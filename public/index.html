@@ -17,10 +17,19 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/scroll-button.css" type="text/css" />
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!-- Load timeago.js library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.full.min.js"
+      integrity="sha512-wb3lqal2VtYhmlPAr232VP+Zus676CFAEYdywxIUSxG6F/X9WhN6SpREkWUdwBvMpd6gCKuKTGHhdum6m1wOvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <!-- Character counter JS -->
@@ -44,56 +53,50 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav class="navbar">
+    <nav class="navbar" id="scrollingNav">
       <span>tweeter</span>
       <div class="nav-div">
-        <p><strong>Write&nbsp;</strong> a new tweet</p>
+        <button id="flip"><strong>Write&nbsp;</strong> a new tweet</button>
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
+
+    <button id="scrollButton" title="Go to top">Top</button>
 
     <header class="profile-header">
       <div class="profile-header-items">
         <img src="/images/profile-hex.png" />
       </div>
-      <br />
       <div class="profile-header-items">
         <h2>Your Name</h2>
       </div>
     </header>
-    
+
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2 class="form-heading">Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text"  placeholder="Today is a wonderful day :)" id="tweet-text"></textarea>
-          <div class="button-counter">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id="chars">140</output>
-          </div>
-        </form>
-        <article class="tweet-container"> 
-          <header class="tweet-header">
-            <div class="user-logo-name">
-            <img class="image-spacing" src="https://i.imgur.com/73hZDYK.png">Newton</img>
+        
+        <div id="disappear">
+          <h2 class="form-heading">Compose Tweet</h2>
+          <form id="submit-form">
+            <div id="error-container"></div>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea
+              name="text"
+              placeholder="Today is a wonderful day :)"
+              id="tweet-text"
+            ></textarea>
+            <div class="button-counter">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text" id="chars"
+                >140</output
+              >
             </div>
-            <h1>@SirIsaac</h1>
-          </header>
-          <h4 class="user-tweet">If I have seen further it is by standing on the shoulders of giants</h4>
-          <hr class="solid-line">
-          <footer class="tweet-days-icons">
-            <p>10 days ago</p>
-            <div class="tweet-icons">
-              <i class="fas fa-flag flag"></i>
-              <i class="fas fa-retweet retweet"></i>
-              <i class="fas fa-heart heart"></i>
-            </div>
-          </footer>
-        </article>
+          </form>
+        </div>
+
+        <section id="tweets-section"></section>
       </section>
     </main>
-  
   </body>
 </html>
