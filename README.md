@@ -15,3 +15,20 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+#### Main Page
+!["Main Page"](docs/tweeter.png)
+
+#### Tweet Box disappears when you click write a new tweet
+!["Tweet Box disappears"](docs/tweet-box-disappear.png)
+
+#### Error when user tries to submit empty tweet
+!["Error no data"](docs/empty-data-error.png)
+
+#### Error when user exceeds character limit
+!["Error over character limit"](docs/exceeded-limit-error.png)
+
+#### Nav menu and top button slides up when user scrolls 
+!["Tweet Box disappears"](docs/nav-menu-disappear.png)
