@@ -17,6 +17,26 @@ html {
  * Global layout stuff
  */
 
+
+ @media only screen and (min-width: 400px) {
+  body {
+    color: #545149;
+    background-color: rgb(38, 50, 56);
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container {
+    width: 90%;
+  }
+}
+
+
  @media only screen and (min-width: 768px) {
   body {
     color: #545149;
